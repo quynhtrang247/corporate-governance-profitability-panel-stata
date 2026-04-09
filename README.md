@@ -40,8 +40,7 @@ The analysis was conducted in Stata and included:
 
 ## Files Included
 - `data/corporate_governance_profitability_data.xlsx`: Excel dataset used for panel-data analysis
-- `code/analysis.do`: main Stata script for cleaning, diagnostics, estimation, and export
-- `code/stata_commands.docx`: original command notes used during the project
+- `code/stata_command.do`: main Stata script for cleaning, diagnostics, estimation, and export
 - `docs/final_report.pdf`: final project report
 
 ## Note
