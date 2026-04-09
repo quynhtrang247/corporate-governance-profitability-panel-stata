@@ -1,39 +1,48 @@
-# Data Note
+# Relationship between Corporate Governance and Firm Profitability
 
-This folder contains the dataset used for the project **Relationship between Corporate Governance and Firm Profitability**.
+## Overview
+This project examines how corporate governance mechanisms affect firm profitability among HNX-listed firms from 2010 to 2024. The study uses panel data econometrics in Stata to evaluate how board structure, executive characteristics, and firm-level controls are associated with accounting-based profitability measures.
 
-## File
-- `corporate_governance_profitability_data.xlsx`
+## Research Objective
+The project aims to investigate whether corporate governance variables, such as board size, board independence, female board representation, CEO duality, board meeting frequency, and executive characteristics, significantly affect firm profitability.
 
-## Description
-The dataset includes firm-level panel data used for Stata-based econometric analysis of the relationship between corporate governance and firm profitability.
+## Data
+- Sample: HNX-listed firms
+- Period: 2010–2024
+- Dependent variables: pre-tax ROA, pre-tax ROE
+- Independent variables: board size, board independence, female board members, CEO duality, board meetings, chair and CEO characteristics
+- Control variables: firm size, leverage, sales growth, foreign ownership, Big4 auditing, and fixed asset ratio
 
-## Main Variable Groups
-### Dependent variables
-- `pretax_roa`
-- `pretax_roe`
+## Methods
+The analysis was conducted in Stata and included:
+- Data cleaning and type conversion
+- Variable construction
+- Log transformation and winsorization
+- Panel data setup
+- Multicollinearity test (VIF)
+- Hausman specification test
+- Heteroskedasticity test
+- Autocorrelation test
+- Fixed Effects regression with clustered robust standard errors
+- Sub-sample regression by industry
 
-### Corporate governance variables
-- `boardsize`
-- `independentboardmember`
-- `femaleboardmember`
-- `duality`
-- `numberofboardmeeting`
-- `chair_gender`
-- `chair_birthyear`
-- `ceo_gender`
-- `ceo_birthyear`
+## Key Findings
+- Board meeting frequency shows a positive and statistically significant relationship with profitability.
+- CEO age is positively associated with both ROA and ROE.
+- Leverage has a strong negative effect on profitability.
+- Big4 auditing is positively associated with firm performance in the full sample.
 
-### Control variables
-- `total_assets`
-- `total_liabilities`
-- `total_revenues`
-- `gross_ppe`
-- `foreign_ownership`
-- `big4_auditing`
+## Repository Structure
+- `data/`: dataset used for the analysis
+- `code/`: Stata scripts and command files
+- `docs/`: final report
+- `outputs/`: exported regression tables and result files
 
-## Notes
-- Firm size is measured as the natural logarithm of total assets.
-- Leverage is constructed from total liabilities and total assets.
-- Key financial variables are winsorized to reduce the influence of outliers.
-- The dataset is used for panel regression analysis in Stata.
+## Files Included
+- `data/corporate_governance_profitability_data.xlsx`: Excel dataset used for panel-data analysis
+- `code/analysis.do`: main Stata script for cleaning, diagnostics, estimation, and export
+- `code/stata_commands.docx`: original command notes used during the project
+- `docs/final_report.pdf`: final project report
+
+## Note
+This repository is intended as an academic project portfolio. It highlights the data preparation, panel-data estimation, and empirical analysis workflow conducted in Stata.
