@@ -1,30 +1,39 @@
-# Relationship between Corporate Governance and Firm Profitability
+# Data Note
 
-## Objective
-This project examines how corporate governance mechanisms affect firm profitability among HNX-listed firms from 2010 to 2024.
+This folder contains the dataset used for the project **Relationship between Corporate Governance and Firm Profitability**.
 
-## Data
-- Sample: HNX-listed firms
-- Period: 2010–2024
-- Dependent variables: pre-tax ROA, pre-tax ROE
-- Key explanatory variables: board size, board independence, female board members, CEO duality, board meetings, and executive characteristics
-- Control variables: firm size, leverage, sales growth, foreign ownership, Big4 auditing, and fixed asset ratio
+## File
+- `corporate_governance_profitability_data.xlsx`
 
-## Methods
-- Data cleaning and variable transformation in Stata
-- Winsorization and outlier treatment
-- Panel data setup
-- VIF, Hausman, heteroskedasticity, autocorrelation, and time fixed-effects tests
-- Fixed Effects regression with clustered robust standard errors
+## Description
+The dataset includes firm-level panel data used for Stata-based econometric analysis of the relationship between corporate governance and firm profitability.
 
-## Key Findings
-- Board meeting frequency is positively associated with profitability
-- CEO age is positively related to ROA and ROE
-- Leverage has a strong negative effect
-- Big4 auditing is positively associated with firm performance
+## Main Variable Groups
+### Dependent variables
+- `pretax_roa`
+- `pretax_roe`
 
-## Repository Structure
-- `code/`: Stata scripts
-- `outputs/`: selected regression tables and diagnostic outputs
-- `docs/`: report or supporting documents
-- `data/`: data note
+### Corporate governance variables
+- `boardsize`
+- `independentboardmember`
+- `femaleboardmember`
+- `duality`
+- `numberofboardmeeting`
+- `chair_gender`
+- `chair_birthyear`
+- `ceo_gender`
+- `ceo_birthyear`
+
+### Control variables
+- `total_assets`
+- `total_liabilities`
+- `total_revenues`
+- `gross_ppe`
+- `foreign_ownership`
+- `big4_auditing`
+
+## Notes
+- Firm size is measured as the natural logarithm of total assets.
+- Leverage is constructed from total liabilities and total assets.
+- Key financial variables are winsorized to reduce the influence of outliers.
+- The dataset is used for panel regression analysis in Stata.
